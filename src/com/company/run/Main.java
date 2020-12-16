@@ -51,6 +51,8 @@ public class Main {
                     abundantList[op]-=q;
                     consume=q;
                     cousumeSum+=q;
+                    System.out.printf("共拿走"+cousumeSum);
+
 
                 } else if (abundantList[op] > 0) {
                     System.out.println("还有一点ㄟ(≧◇≦)");
@@ -58,6 +60,8 @@ public class Main {
                     consume=abundantList[op];
                     abundantList[op]=0;
                     cousumeSum+=abundantList[op];
+                    System.out.printf("共拿走"+cousumeSum);
+
 
                 } else {
                     System.out.println("干饭失败(っ °Д °;)っ");
@@ -99,10 +103,14 @@ public class Main {
                     abundantList[op2] -= q2;
                     System.out.println(q2 + quantifier[op2] + foodName[op2] + "已被拿走");
                     cousumeSum+=q2;
+                    System.out.printf("共拿走"+cousumeSum);
+
                 } else if (abundantList[op2] > 0) {
-                    abundantList[op2] = 0;
                     System.out.println(foodName[op2] + "已被大妈抢光");
                     cousumeSum+=abundantList[op2];
+                    abundantList[op2] = 0;
+                    System.out.printf("共拿走"+cousumeSum);
+
                 } else {
                     System.out.println("大妈失手(ノへ￣、)");
                 }
@@ -119,10 +127,13 @@ public class Main {
                     abundantList[op3] -= q3;
                     System.out.println(q3+ quantifier[op3] + foodName[op3] + "已被拿走");
                     cousumeSum+=q3;
+                    System.out.printf("共拿走"+cousumeSum);
+
                 } else if (abundantList[op3] > 0) {
-                    abundantList[op3] = 0;
                     System.out.println(foodName[op3] + "已被大爷抢光");
                     cousumeSum+=abundantList[op3];
+                    abundantList[op3] = 0;
+                    System.out.printf("共拿走"+cousumeSum);
 
                 } else {
                     System.out.println("大爷失手(￣ ‘i ￣;");
