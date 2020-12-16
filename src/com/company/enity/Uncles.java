@@ -1,7 +1,6 @@
 package com.company.enity;
 
 import java.util.Random;
-import com.company.utils.P;
 
 
 
